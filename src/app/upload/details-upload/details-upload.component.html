@@ -1,0 +1,16 @@
+<!-- <div class="container">
+    <h5>{{fileUpload.name}}</h5>
+    <span class="pull-right">
+        <a class="btn btn-primary" href="{{fileUpload.url}}" style="float:right">Download</a>
+        <button (click)='deleteFileUpload(fileUpload)' class="btn btn-danger btn-xs" style="float: right">Delete</button>
+    </span>
+</div> -->
+
+
+<span class="lead">{{fileUpload.name}}</span>
+<span style="float:right; margin-left: 10px;">
+    <a class="btn btn-primary" href="{{fileUpload.url}}">Download</a>
+</span>
+<span style="float:right">
+    <a class="btn btn-success" (click)='deleteFileUpload(fileUpload)'>Delete</a>
+</span>

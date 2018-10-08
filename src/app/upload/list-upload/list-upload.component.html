@@ -1,0 +1,35 @@
+<div class="container">
+<hr>
+<input 
+#query
+(keyup)="filter(query.value)"
+class="form-control" type="text" placeholder="Search the Call logs">
+<!-- (keydown)="search($event)" -->
+
+<!-- <div class="card">
+  <div class="card-body">
+    <h1 class="card-title">List of Files</h1>
+    <div class="list-group list-group-flush" *ngFor="let file of filtered">
+      <div class="list-group-item">
+        <details-upload [fileUpload]='file'></details-upload>
+      </div>
+    </div>
+  </div>
+</div>
+</div> -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>File List</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let file of filtered">
+      <td><details-upload [fileUpload]='file'></details-upload></td>
+    </tr>
+  </tbody>
+</table>
+<hr>
